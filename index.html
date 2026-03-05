@@ -4,9 +4,12 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>BETONG Construction</title>
+<title>Công Ty Xây Dựng BETONG</title>
+
+<meta name="description" content="Công ty xây dựng BETONG chuyên thi công nhà phố, biệt thự, công trình dân dụng chất lượng cao.">
+<meta name="keywords" content="xây dựng, thi công nhà, xây nhà trọn gói, sửa chữa nhà">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -50,9 +53,8 @@ list-style:none;
 }
 
 nav a{
-color:white;
 text-decoration:none;
-font-weight:500;
+color:white;
 }
 
 .hero{
@@ -85,24 +87,11 @@ gap:30px;
 background:#1c1c1c;
 padding:30px;
 border-radius:10px;
-transition:0.4s;
+transition:0.3s;
 }
 
 .card:hover{
 transform:translateY(-10px);
-background:#252525;
-}
-
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-text-align:center;
-gap:40px;
-}
-
-.stat h3{
-font-size:50px;
-color:#ffc107;
 }
 
 .projects{
@@ -136,13 +125,13 @@ max-width:500px;
 
 input,textarea{
 padding:12px;
-border-radius:6px;
 border:none;
+border-radius:6px;
 }
 
 button{
-background:#ffc107;
 padding:14px;
+background:#ffc107;
 border:none;
 font-weight:600;
 cursor:pointer;
@@ -154,15 +143,36 @@ text-align:center;
 padding:30px;
 }
 
-.reveal{
-opacity:0;
-transform:translateY(40px);
-transition:1s;
+/* floating buttons */
+
+.float{
+position:fixed;
+right:20px;
+display:flex;
+flex-direction:column;
+gap:15px;
+bottom:30px;
+z-index:999;
 }
 
-.reveal.active{
-opacity:1;
-transform:none;
+.float a{
+width:55px;
+height:55px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:25px;
+color:white;
+text-decoration:none;
+}
+
+.call{
+background:#28a745;
+}
+
+.zalo{
+background:#0084ff;
 }
 
 @media(max-width:900px){
@@ -203,11 +213,11 @@ font-size:35px;
 
 <section class="hero" id="home">
 
-<h2>Xây Dựng Công Trình Chất Lượng Cao</h2>
+<h2>Thi Công Xây Dựng Chuyên Nghiệp</h2>
 
 </section>
 
-<section id="services" class="reveal">
+<section id="services">
 
 <h2>Dịch Vụ</h2>
 
@@ -215,12 +225,12 @@ font-size:35px;
 
 <div class="card">
 <h3>Xây nhà trọn gói</h3>
-<p>Thi công nhà phố và biệt thự chuyên nghiệp.</p>
+<p>Thi công nhà phố và biệt thự.</p>
 </div>
 
 <div class="card">
-<h3>Sửa chữa</h3>
-<p>Nâng cấp cải tạo công trình cũ.</p>
+<h3>Sửa chữa nhà</h3>
+<p>Nâng cấp cải tạo công trình.</p>
 </div>
 
 <div class="card">
@@ -232,26 +242,7 @@ font-size:35px;
 
 </section>
 
-<section class="stats reveal">
-
-<div class="stat">
-<h3 class="counter" data-target="200">0</h3>
-<p>Công trình</p>
-</div>
-
-<div class="stat">
-<h3 class="counter" data-target="150">0</h3>
-<p>Khách hàng</p>
-</div>
-
-<div class="stat">
-<h3 class="counter" data-target="10">0</h3>
-<p>Năm kinh nghiệm</p>
-</div>
-
-</section>
-
-<section id="projects" class="reveal">
+<section id="projects">
 
 <h2>Công Trình</h2>
 
@@ -265,7 +256,7 @@ font-size:35px;
 
 </section>
 
-<section id="about" class="reveal">
+<section id="about">
 
 <h2>Giới Thiệu</h2>
 
@@ -277,8 +268,8 @@ font-size:35px;
 
 <p>
 
-BETONG Construction chuyên thi công công trình dân dụng,
-biệt thự và nhà phố với đội ngũ kỹ sư giàu kinh nghiệm.
+BETONG Construction chuyên thi công nhà phố, biệt thự
+và công trình dân dụng với đội ngũ kỹ sư giàu kinh nghiệm.
 
 </p>
 
@@ -288,7 +279,7 @@ biệt thự và nhà phố với đội ngũ kỹ sư giàu kinh nghiệm.
 
 </section>
 
-<section id="contact" class="reveal">
+<section id="contact">
 
 <h2>Liên Hệ</h2>
 
@@ -302,7 +293,7 @@ biệt thự và nhà phố với đội ngũ kỹ sư giàu kinh nghiệm.
 
 <textarea name="message" placeholder="Nội dung"></textarea>
 
-<button>Gửi</button>
+<button>Gửi liên hệ</button>
 
 </form>
 
@@ -316,43 +307,25 @@ biệt thự và nhà phố với đội ngũ kỹ sư giàu kinh nghiệm.
 
 </footer>
 
+<div class="float">
+
+<a href="tel:0900000000" class="call">☎</a>
+
+<a href="https://zalo.me/0900000000" class="zalo">Z</a>
+
+</div>
+
 <script>
 
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-a.addEventListener("click",e=>{
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+anchor.addEventListener("click",function(e){
+
 e.preventDefault()
-document.querySelector(a.getAttribute("href")).scrollIntoView({
+
+document.querySelector(this.getAttribute("href")).scrollIntoView({
 behavior:"smooth"
 })
-})
-})
 
-const counters=document.querySelectorAll(".counter")
-
-counters.forEach(counter=>{
-let update=()=>{
-let target=+counter.dataset.target
-let c=+counter.innerText
-let inc=target/200
-
-if(c<target){
-counter.innerText=Math.ceil(c+inc)
-setTimeout(update,10)
-}else{
-counter.innerText=target
-}
-}
-update()
-})
-
-window.addEventListener("scroll",()=>{
-document.querySelectorAll(".reveal").forEach(el=>{
-let top=el.getBoundingClientRect().top
-let win=window.innerHeight
-
-if(top<win-100){
-el.classList.add("active")
-}
 })
 })
 
