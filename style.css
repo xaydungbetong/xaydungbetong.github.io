@@ -1,57 +1,157 @@
-body{
-font-family: Arial;
+/* reset */
+
+*{
 margin:0;
-background:#f4f4f4;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
 }
+
+/* body */
+
+body{
+background:#0f0f0f;
+color:white;
+line-height:1.6;
+}
+
+/* header */
 
 header{
-background:#222;
-color:white;
-text-align:center;
-padding:30px;
+background:#000;
+padding:20px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
 }
 
-nav{
-background:#444;
-padding:10px;
-text-align:center;
+header h1{
+color:#ffc107;
+font-size:26px;
 }
+
+/* menu */
 
 nav a{
 color:white;
-margin:10px;
 text-decoration:none;
+margin-left:20px;
+font-weight:500;
 }
 
+nav a:hover{
+color:#ffc107;
+}
+
+/* hero */
+
 .hero{
-padding:100px;
+height:60vh;
+background:url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5") center/cover;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
 text-align:center;
-background:#ddd;
+padding:20px;
+}
+
+.hero h2{
+font-size:45px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+/* section */
+
+section{
+padding:80px 10%;
+}
+
+h2{
+margin-bottom:30px;
+color:#ffc107;
+}
+
+/* cards */
+
+.card{
+background:#1c1c1c;
+padding:25px;
+margin-bottom:20px;
+border-radius:8px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+background:#262626;
+}
+
+/* project images */
+
+img{
+max-width:100%;
+border-radius:8px;
+margin-bottom:15px;
+}
+
+/* form */
+
+form{
+max-width:500px;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,textarea{
+padding:12px;
+border:none;
+border-radius:6px;
 }
 
 button{
-padding:15px 25px;
-font-size:18px;
+padding:14px;
+border:none;
+background:#ffc107;
+font-weight:bold;
 cursor:pointer;
 }
 
-.services{
-display:flex;
-justify-content:center;
-gap:20px;
-padding:40px;
+button:hover{
+background:#e0a800;
 }
 
-.card{
-background:white;
-padding:20px;
-width:250px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
+/* footer */
 
 footer{
+background:#000;
 text-align:center;
-padding:20px;
-background:#222;
-color:white;
+padding:25px;
+margin-top:40px;
+}
+
+/* mobile */
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:10px;
+}
+
+nav a{
+margin:0 10px;
+}
+
+.hero h2{
+font-size:30px;
+}
+
 }
