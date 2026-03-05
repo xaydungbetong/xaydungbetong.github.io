@@ -1,1 +1,5 @@
-
+body {
+  background-color: #f0f0f0; /* Sử dụng mã Hex */
+  /* Hoặc: background-color: lightblue; */
+  /* Hoặc: background-color: rgb(255, 255, 255); */
+}
